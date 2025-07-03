@@ -1,0 +1,393 @@
+/* === Moonveil FINAL CLEAN with Cursor FIX === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c2a;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* cursor: none; --> FIX: DIHAPUS */
+}
+
+main {
+    flex: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #c084fc;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+header, footer {
+    background: rgba(18,18,43,0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #c084fc;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #c084fc;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+.hero, .features, .features-page, .support-page, .about {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    color: #c084fc;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+.hero-image img {
+    max-width: 500px;
+}
+
+.buttons a, .btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 10px 5px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn.invite {
+    background: linear-gradient(135deg, #a855f7, #7e22ce);
+    color: #fff;
+}
+
+.btn.vote {
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+    color: #fff;
+}
+
+.btn.support {
+    border: 2px solid #c084fc;
+    color: #c084fc;
+    background: transparent;
+}
+
+.btn.large {
+    font-size: 1.2em;
+    padding: 15px 35px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    background: #0b0c2a;
+    box-shadow: 0 0 15px #c084fc55;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.feature-card h3 {
+    color: #c084fc;
+}
+
+.about-box, .special-card {
+    background: #0b0c2a;
+    box-shadow: 0 0 15px #c084fc55;
+    max-width: 500px;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(270deg, #1a1a3c, #7e22ce, #4b0082);
+    background-size: 600% 600%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.cta {
+    background: #0b0c2a;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta h2 {
+    font-size: 2.8em;
+    color: #c084fc;
+}
+
+.cta p {
+    font-size: 1.2em;
+}
+
+.wave svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-text h1 {
+        font-size: 2.4em;
+    }
+    .hero-image img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(18,18,43,0.95);
+        border-radius: 10px;
+        box-shadow: 0 0 10px #c084fc;
+        padding: 15px;
+        z-index: 9999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+body.home header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* PRELOADER */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0b0c2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#preloader img {
+    width: 80px;
+}
+
+/* COOKIE CONSENT */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(18,18,43,0.95);
+    color: #eee;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    box-shadow: 0 -5px 15px #00000055;
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+}
+
+.cookie-banner button {
+    background: #7e22ce;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cookie-banner button:hover {
+    background: #5b18a0;
+}
+/* === DARK MODE TOGGLE (punya lu) === */
+.dark-mode-toggle {
+    color: #eee;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* OPTIONAL: di desktop taruh pojok kanan */
+@media (min-width: 769px) {
+    .nav-links li:last-child a.dark-mode-toggle {
+        margin-left: auto;
+    }
+}
+
+/* === DARK MODE (fix + animasi smooth) === */
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.feature-card, .about-box, .special-card, header, footer {
+    transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+    background: rgba(10,10,30,0.95);
+}
+
+body.dark-mode .feature-card, 
+body.dark-mode .about-box, 
+body.dark-mode .special-card {
+    background: #1a1a2e;
+    box-shadow: 0 0 15px #8a2be255;
+}
+
+body.dark-mode a {
+    color: #c084fc;
+}
+
+body.dark-mode .btn.invite {
+    background: linear-gradient(135deg, #7e22ce, #4b0082);
+}
+
+body.dark-mode .btn.vote {
+    background: linear-gradient(135deg, #5b18a0, #8a2be2);
+}
+
+body.dark-mode .btn.support {
+    border-color: #c084fc;
+    color: #c084fc;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}

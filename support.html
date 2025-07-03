@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonveil Support - Get Help & Contact</title>
+    <meta name="description" content="Get help, support, and contact the Moonveil Team for any issues or questions.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body class="home">
+
+    <header>
+        <div class="logo">Moonveil</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+            <div class="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Moonveil Support Center</h1>
+            <p>We’re here to support you 24/7.</p>
+            <div class="buttons">
+                <a href="#community" class="btn invite">Community</a>
+                <a href="#faq" class="btn support">FAQ</a>
+                <a href="#contact" class="btn vote">Contact</a>
+            </div>
+        </section>
+
+        <section id="community" class="features">
+            <h2>Community Support</h2>
+            <div class="feature-grid">
+    <div class="feature-card" data-aos="zoom-in"><h3>Discord Server</h3><p>Get help from staff and other users.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Documentation</h3><p>Browse full guides and tutorials.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Video Tutorials</h3><p>Watch our YouTube setup guides.</p></div>
+            </div>
+        </section>
+
+    <section class="features" data-aos="fade-up">
+            <h2>Support Resources</h2>
+            <div class="feature-grid">
+    <div class="feature-card" data-aos="zoom-in"><h3>Knowledge Base</h3><p>Read detailed articles and solutions.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Status Page</h3><p>Check if our services are operational.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Feedback & Suggestions</h3><p>Submit your ideas to improve Moonveil.</p></div>
+            </div>
+        </section>
+
+        <section id="faq" class="features-page">
+            <h2>Frequently Asked Questions</h2>
+            <div class="feature-grid">
+    <div class="feature-card" data-aos="zoom-in"><h3>How to invite Moonveil?</h3><p>Use the invite button on homepage.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Where to report bugs?</h3><p>Use our Discord support channels.</p></div>
+    <div class="feature-card" data-aos="zoom-in"><h3>Premium features?</h3><p>Check our Premium page for benefits.</p></div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta">
+            <h2>Contact Support</h2>
+            <p>Still need help? Contact us directly.</p>
+            <a href="mailto:support@moonveil.com" class="btn invite large">Email Support</a>
+            <div style="margin-top:30px;">
+                <a href="terms.html" class="btn support">Terms of Service</a>
+                <a href="privacy.html" class="btn support">Privacy Policy</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Moonveil Bot. All rights reserved. | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    });
+</script>
+
+</body>
+</html>

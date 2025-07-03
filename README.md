@@ -22,7 +22,6 @@ To run locally:
 2. Open index.html in your browser.
 
 Optional: Run a local server (for JS modules or fetch):
-python3 -m http.server
 
 🛠️ Technologies Used
 
